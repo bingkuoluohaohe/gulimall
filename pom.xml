@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <groupId>com.jnu.gulimall</groupId>
+    <artifactId>gulimall</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <modelVersion>4.0.0</modelVersion>
+    <description>聚合服务</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>gulimall-common</module>
+        <module>renren-fast</module>
+        <module>gulimall-admin</module>
+    </modules>
+
+    <properties>
+        <spring.version>2.1.8.RELEASE</spring.version>
+        <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.1.0.RELEASE</spring-cloud-alibaba.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--spring-boot-dependencies-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--spring-cloud-dependencies-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--spring-cloud-alibaba-dependencies-->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
